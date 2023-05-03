@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="notfication-page">
+
+        <header class="content-header | flex-group">
+          <h1>Notifications <span class="notification-number">3</span></h1>
+          <button class="button">Mark all as read</button>
+        </header>
+
+        <div class="posts">
+          <div class="post | flex-group" data-read="false">
+            <div class="post-pfp">
+              <img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber Profile Picture">
+            </div>
+            <div>
+              <p><strong><a href="#" class="name">Mark Webber</a></strong> reacted to your recent post
+                <strong><a href="#" class="post-details activity">My first
+                    tournament
+                    today!</a></strong>
+              </p>
+              <p class="time">1m ago</p>
+            </div>
+          </div>
+
+          <div class="post | flex-group" data-read="false">
+            <div class="post-pfp">
+              <img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray Profile Picture">
+            </div>
+            <div>
+              <p><strong><a href="#" class="name">Angela Gray</a></strong> <span class="post-details">followed
+                  you</span>
+              </p>
+              <p class="time">5m ago</p>
+            </div>
+          </div>
+
+          <div class="post | flex-group" data-read="false">
+            <div class="post-pfp">
+              <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson Profile Picture">
+            </div>
+            <div>
+              <p><strong><a href="#" class="name">Jacob Thompson</a> <span> has joined
+                    your group <a href="#" class="post-details activity">Chess
+                      Club</a></span></strong>
+              </p>
+              <p class="time">1day ago</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="messages">
+              <div class="message">
+                <button class="message-trigger" aria-expanded="false" aria-controls="message">
+                  <div class="post-details | flex-group">
+                    <div class="post-pfp">
+                      <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin Profile Picture">
+                    </div>
+
+                    <div>
+                      <div class="flex-group">
+                        <p><strong><a href="#" class="name">Rizky Hasanuddin</a> <span class="post-details">sent you a
+                              private message</span></strong></p>
+                        <svg class="arrow-down" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                      </div>
+                      <p class="time">5 days ago</p>
+                    </div>
+                  </div>
+                </button>
+                <div class="message-content" role="region" aria-hidden="true">
+                  <div tabindex="0">
+                    <p>Hello, thanks for setting up the <a href="#" class="activity">Chess Club</a> . I've been a member
+                      for a few weeks now and I'm
+                      already
+                      having lots of fun
+                      and improving my game.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="post | flex-group">
+            <div class="post-pfp">
+              <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith Profile Picture">
+            </div>
+            <div>
+              <p><strong><a href="#" class="name">Kimberly Smith</a> <span class="post-details">commented on your
+                    picture</span></strong></p>
+              <p class="time">1week ago</p>
+            </div>
+            <div class="post-image" tabindex="0">
+              <img src="assets/images/image-chess.webp" alt="Chess">
+            </div>
+          </div>
+
+          <div class="post | flex-group">
+            <div class="post-pfp">
+              <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson Profile Picture">
+            </div>
+            <div>
+              <p><strong><a href="#" class="name">Nathan Peterson</a> <span class="post-details">reacted to your
+                    recent post <a href="#" class="activity"> 5
+                      end-game
+                      strategies to increase your win rate</a></span></strong></p>
+              <p class="time">2 weeks ago</p>
+            </div>
+          </div>
+
+          <div class="post | flex-group">
+            <div class="post-pfp">
+              <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim Profile Picture">
+            </div>
+            <div>
+              <p><strong><a href="#" class="name">Anna Kim</a> <span>left the group</span> <a href="#"
+                    class="activity post-details">Chess
+                    Club</a></strong>
+              </p>
+              <p class="time">2 weeks ago</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>s
+</body>
+
+</html>

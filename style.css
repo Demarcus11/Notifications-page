@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+:root {
+  --clr-nuetral-100: hsl(0, 0%, 100%);
+  --clr-nuetral-200: hsl(210, 60%, 98%);
+  --clr-nuetral-300: hsl(211, 68%, 94%);
+  --clr-nuetral-400: hsl(205, 33%, 90%);
+  --clr-nuetral-500: hsl(219, 14%, 63%);
+  --clr-nuetral-600: hsl(219, 12%, 42%);
+  --clr-nuetral-700: hsl(224, 21%, 14%);
+
+  --clr-primary-400: hsl(1, 90%, 64%);
+  --clr-primary-500: hsl(219, 85%, 26%);
+
+  --ff-primary: "Plus Jakarta Sans", sans-serif;
+
+  --fw-medium: 500;
+  --fw-extrabold: 800;
+
+  --fs-300: 0.9rem;
+  --fs-400: 1rem;
+  --fs-500: 1.3rem;
+
+  --body-padding-block: 1rem;
+  --notification-spacing: 0.5rem;
+  --animation-pulse: pulse 1s infinite;
+  --name-spacing-right: 0.3rem;
+  --activity-spacing-left: 0.2rem;
+  --message-content-spacing-top: 1rem;
+  --message-content-spacing-left: 3rem;
+  --message-content-padding: 1rem;
+  --notification-number-spacing-left: 0.5rem;
+}
+
+/* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, Remove default padding, Reset all font sizes and make sure button, forms, etc inherit font */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:is(:hover, :focus) {
+  color: var(--clr-primary-500);
+  font-weight: var(--fw-extrabold);
+}
+
+body {
+  background-color: var(--clr-nuetral-200);
+  color: var(--clr-nuetral-500);
+  font-size: var(--fs-300);
+  font-family: var(--ff-primary);
+  padding: var(--body-padding-block) 0;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+}
+
+/* Utilities */
+
+.container {
+  --max-width: 50rem;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  transition: all 300ms;
+}
+
+.button:is(:hover, :focus) {
+  color: var(--clr-primary-500);
+}
+
+.message-trigger {
+  background: transparent;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Notification Page */
+
+.notfication-page {
+  display: grid;
+  gap: 3rem;
+  background-color: var(--clr-nuetral-100);
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  .notfication-page {
+    padding: 2rem;
+    -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 10px -3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Header */
+
+.content-header {
+  justify-content: space-between;
+}
+
+.content-header h1 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-nuetral-700);
+}
+
+.notification-number {
+  background-color: var(--clr-primary-500);
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.75rem;
+  color: var(--clr-nuetral-100);
+  font-size: var(--fs-400);
+  margin-left: var(--notification-number-spacing-left);
+}
+
+/* Posts */
+
+.posts {
+  display: grid;
+  gap: 2rem;
+}
+
+.posts > * {
+  --bg-color: var(--clr-nuetral-200);
+
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+.posts > :nth-child(1) {
+  background-color: var(--bg-color);
+}
+
+.posts > :nth-child(2) {
+  background-color: var(--bg-color);
+}
+
+.posts > :nth-child(3) {
+  background-color: var(--bg-color);
+}
+
+.post {
+  --gap: 1rem;
+
+  width: 100%;
+  cursor: pointer;
+}
+
+.post[data-read="false"] .post-details::after {
+  content: "";
+  width: 8px;
+  aspect-ratio: 1 / 1;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: var(--notification-spacing);
+  animation: var(--animation-pulse);
+}
+
+.post[data-read="true"] .post-details::after {
+  display: none;
+}
+
+.post p {
+  color: var(--clr-nuetral-500);
+  text-align: left;
+}
+
+.name {
+  color: var(--clr-nuetral-700);
+  font-weight: var(--fw-extrabold);
+  margin-right: var(--name-spacing-right);
+}
+
+.activity {
+  color: var(--clr-nuetral-600);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-300);
+  margin-left: var(--activity-spacing-left);
+}
+
+.post-details {
+  --gap: 1rem;
+}
+
+.time {
+  width: max-content;
+}
+
+.message-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+  margin-top: var(--message-content-spacing-top);
+  margin-left: var(--message-content-spacing-left);
+}
+
+.message-content[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.message-content[aria-hidden="true"] > div {
+  padding: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+
+.message-content > div {
+  overflow: hidden;
+  margin-inline: auto;
+  border: 1px solid var(--clr-nuetral-500);
+  padding: var(--message-content-padding);
+}
+
+.message-content > div:is(:hover, :focus) {
+  background-color: var(--clr-nuetral-300);
+}
+
+.post-pfp {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
+.post-image {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
+.post-image img {
+  transition: transform 500ms;
+}
+
+.post-image img:hover {
+  transform: scale(3);
+}
+
+.arrow-down {
+  width: 20px;
+  transition: rotate 500ms;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .arrow-down {
+    margin-top: 0;
+    margin-left: 5rem;
+  }
+}
+
+.arrow-down[aria-hidden="false"] {
+  rotate: 180deg;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
